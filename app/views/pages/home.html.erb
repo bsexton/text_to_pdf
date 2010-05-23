@@ -1,0 +1,8 @@
+<title>Text to PDF, convert your text to PDF</title>
+<h1>Text to PDF </h1>
+<% form_tag :action => 'parse_comments' do %>
+    <%= text_area :myform, :comments, :cols => '40', :rows => '5' %>
+	<p> </p>
+    <%= submit_tag "Submit" %>
+<% end %>
+<%= link_to "About", about_path %>

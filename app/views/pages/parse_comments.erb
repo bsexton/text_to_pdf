@@ -1,0 +1,21 @@
+<%=require 'pdf/writer'%>
+<html>
+<title>Text to PDF, convert your text to PDF</title>
+<body>
+<h1>PDF created</h1>
+  
+  
+<%=pdf = PDF::Writer.new
+pdf.select_font("Times-Roman")
+pdf.text(@submit)
+
+pdf.save_as('.\public\file.pdf')%>
+
+
+<!--<%= link_to "Your file", "/file.pdf" %> -->
+<!--<li><a href="#"><img src="/file.pdf"/></a></li>-->
+<li><a href="/file.pdf">Your new File</a> </li>
+
+
+</body>
+</html>
